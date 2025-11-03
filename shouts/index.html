@@ -16,6 +16,7 @@ __________              __       ________
  |____|   |____/|___|  /__|_ \  \______  (____  /___|  /\___  / 
                      \/     \/         \/     \/     \//_____/  
 -->
+
 <style>
 body {
   background-color: black;
@@ -26,6 +27,7 @@ body {
   overflow-x: hidden;
   font-size: clamp(10px, 2.5vw, 16px);
   line-height: 1.4;
+  padding-bottom: 50px; 
 }
 
 header {
@@ -59,36 +61,40 @@ pre {
   word-break: break-word;
 }
 
-.footer {
-  border-top: 1px solid #00bfff;
-  padding: 10px;
-  text-align: center;
-  font-size: 0.9em;
-  background: #050505;
+.timestamp {
+  display: inline-block;
+  min-width: 90px;
 }
 
-a {
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #050505;
+  border-top: 1px solid #00bfff;
+  padding: 4px 10px;
+  font-size: 0.85em;
+  color: #00bfff;
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;           
+  box-sizing: border-box;
+}
+
+.footer a {
   color: #00bfff;
   text-decoration: none;
 }
 
-a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
-  header h1 {
-    font-size: 0.8em;
-  }
-
-  .footer {
-    font-size: 0.75em;
-  }
-
-  .timestamp {
-    display: inline-block;
-    min-width: 90px;
-  }
+  header h1 { font-size: 0.8em; }
+  .footer { font-size: 0.75em; padding: 5px; }
 }
 </style>
 </head>
@@ -122,7 +128,8 @@ a:hover {
 </main>
 
 <div class="footer">
-  <p><a href="https://punkgang.net">← back to punkgang.net</a></p>
+  <span class="status">[--:--] [1] [core] 1:weechat</span>
+  <a href="https://punkgang.net">← punkgang.net</a>
 </div>
 
 <script>
@@ -132,6 +139,7 @@ function updateTimestamps() {
   document.querySelectorAll('.timestamp').forEach(el => {
     el.textContent = `│${time} │`;
   });
+  document.querySelector('.footer .status').textContent = `[${time}] [1] [core] 1:weechat`;
 }
 updateTimestamps();
 setInterval(updateTimestamps, 1000);
