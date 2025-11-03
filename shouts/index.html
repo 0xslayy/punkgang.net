@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Punk Gang — a cyberpunk faction built on biohacking, hacking, breakcore, and movement.">
+<meta name="keywords" content="punkgang, hacking, 0xslayy, slayy, cyberpunk, biohacking, breakcore, parkour, underground collective">
+<meta name="author" content="Punk Gang">
+<title>Punk Gang Shouts</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- 
+__________              __       ________                       
+\______   \__ __  ____ |  | __  /  _____/_____    ____    ____  
+ |     ___/  |  \/    \|  |/ / /   \  ___\__  \  /    \  / ___\ 
+ |    |   |  |  /   |  \    <  \    \_\  \/ __ \|   |  \/ /_/  >
+ |____|   |____/|___|  /__|_ \  \______  (____  /___|  /\___  / 
+                     \/     \/         \/     \/     \//_____/  
+-->
+<style>
+body {
+  background-color: black;
+  color: #00bfff;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: clamp(10px, 2.5vw, 16px);
+  line-height: 1.4;
+}
+
+header {
+  border-bottom: 1px solid #00bfff;
+  padding: 8px 10px;
+  background: #050505;
+  text-align: left;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  display: inline-block;
+  word-break: break-word;
+}
+
+main {
+  margin: 10px;
+  text-align: left;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.shout-lines {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  border-top: 1px solid #00bfff;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  background: #050505;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 0.8em;
+  }
+
+  .footer {
+    font-size: 0.75em;
+  }
+
+  .timestamp {
+    display: inline-block;
+    min-width: 90px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>1.weechat│WeeChat 4.7.1 (C) 2003-2025 - https://weechat.org/</h1>
+</header>
+
+<main id="shouts">
+
+<pre class="ascii">
+<span class="timestamp">│--:--:-- │</span>   ___       __         ______________        _____ 
+<span class="timestamp">│--:--:-- │</span>   __ |     / /___________  ____/__  /_______ __  /_
+<span class="timestamp">│--:--:-- │</span>   __ | /| / /_  _ \  _ \  /    __  __ \  __ `/  __/
+<span class="timestamp">│--:--:-- │</span>   __ |/ |/ / /  __/  __/ /___  _  / / / /_/ // /_  
+<span class="timestamp">│--:--:-- │</span>   ____/|__/  \___/\___/\____/  /_/ /_/\__,_/ \__/  
+<span class="timestamp">│--:--:-- │</span> PUNK GANG SHOUTS
+<span class="timestamp">│--:--:-- │</span> - - - - - - - - - - - - - - - - - - - - - - - - - -
+</pre>
+
+<div class="shout-lines">
+<span class="timestamp">│--:--:-- │</span> &lt;SebastianDalex&gt;: "Running shit cause we can"
+<span class="timestamp">│--:--:-- │</span> &lt;Sysko&gt;: "god sent me"
+<span class="timestamp">│--:--:-- │</span> &lt;D6fault&gt;: "Determination is key"
+<span class="timestamp">│--:--:-- │</span> &lt;108308&gt;: "Btw xeron is the fed"
+<span class="timestamp">│--:--:-- │</span> &lt;Statik&gt;: "yung_innanet"
+<span class="timestamp">│--:--:-- │</span> &lt;Shad0w&gt;: "Only feds call people fed...fed"
+<span class="timestamp">│--:--:-- │</span> &lt;Freulaeux&gt;: "Where ya data@?"
+</div>
+
+</main>
+
+<div class="footer">
+  <p><a href="https://punkgang.net">← back to punkgang.net</a></p>
+</div>
+
+<script>
+function updateTimestamps() {
+  const now = new Date();
+  const time = now.toLocaleTimeString('en-GB', { hour12: false });
+  document.querySelectorAll('.timestamp').forEach(el => {
+    el.textContent = `│${time} │`;
+  });
+}
+updateTimestamps();
+setInterval(updateTimestamps, 1000);
+</script>
+</body>
+</html>
